@@ -1,0 +1,154 @@
+@media (max-width: 992px) {
+    header {
+        div {
+            ul {
+                display: none;
+            }
+    
+            .hamburger {
+                display: inline-block;
+            }
+        }
+
+        .drop-down-menu {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 788px) {
+    .heading .content .header-text p:last-child {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #contacts {
+        ul {
+            flex-wrap: wrap;
+
+            li {
+                &:last-child {
+                    margin: 20px 0 0 0;
+                }
+    
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        > div {
+            padding: 20px;
+
+            .logo {
+                img {
+                    width: 40px;
+                }
+        
+                span {
+                    font-size: 18px;
+                }
+            }
+
+            .purple {
+                margin: 0;
+            }
+        }
+    }
+
+    .section {
+        padding: 50px 20px;
+
+        h2 {
+            font-size: 30px;
+        }
+
+        &:after {
+            right: 20px;
+            left: 20px;
+        }
+    }
+
+    #services {
+        ul {
+            padding-top: 30px;
+            justify-content: center;
+            flex-direction: column;
+
+            li {
+                width: 100%;
+            }
+        }
+    }
+
+    #about {
+        justify-content: center;
+        flex-direction: column;
+
+        > div {
+            &:first-child, &:last-child {
+                width: 100%;
+            }
+        }
+    }
+
+    #offers {
+        .info {
+            justify-content: center;
+            flex-direction: column;
+    
+            > div {
+                &.img-box, &.text {
+                    width: 100%;
+                }
+            }
+        }
+
+        .offer-tabs ul {
+            display: grid;
+            grid-template: 1fr 1fr / 1fr 1fr;
+
+            li {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .information {
+        h3, p {
+            text-align: center;
+        }
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    header > div {
+        flex-direction: column;
+        align-items: center;
+
+        > div:last-child {
+            margin-top: 10px;
+        }
+    }
+
+    .heading .content .header-text {
+        font-size: 30px;
+    }
+
+    .heading .content > p {
+        font-size: 18px;
+    }
+}

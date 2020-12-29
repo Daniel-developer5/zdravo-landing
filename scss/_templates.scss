@@ -1,0 +1,116 @@
+@import "variables";
+@import "mixins";
+
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    padding: 70px 40px;
+    position: relative;
+
+    > p {
+        text-transform: uppercase;
+        color: $main-color;
+        text-align: center;
+    }
+
+    > h2 {
+        font-size: 42px;
+        color: $gray;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 40px;
+        bottom: 0;
+        left: 40px;
+        border-bottom: 1px solid #bebebe;
+    }
+}
+
+.information {
+    * {
+        font-weight: 300;
+    }
+
+    h3 {
+        color: $gray;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    p.under-title {
+        color: $main-color;
+        font-size: 20px;
+    }
+
+    p {
+        color: $gray;
+    }
+}
+
+%image {
+    img {
+        width: 100%;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin-top: 5px;
+        background-color: rgba($color: $main-color, $alpha: 0.6);
+    }
+}
+
+%open-by-opacity {
+    opacity: 0;
+    transition: ease 2s;
+
+    &.open {
+        opacity: 1;
+    }
+}
+
+%menu {
+    margin: 0;
+
+    li {
+        display: flex;
+        border: 1px solid transparent;
+
+        &:hover {
+            background-color: #e7e7e7;
+            color: $main-color;
+
+            a {
+                color: $main-color;
+            }
+        }
+
+        a {
+            @include link($gray);
+        }
+    }
+}
+
+%purple {
+    @include link(#fff);
+    background-color: $main-color;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    &:hover {
+        border-color: $main-color;
+        background-color: transparent;
+        color: $main-color;
+    }
+}

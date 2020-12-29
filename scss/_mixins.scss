@@ -1,0 +1,24 @@
+@mixin translate($direction) {
+    transition: ease-in-out 0.8s;
+    transform: translateX($direction);
+
+    &.open {
+        transform: translateX(0);
+    }
+}
+
+@mixin link($color) {
+    padding: 12px 10px;
+    text-transform: uppercase;
+    color: $color;
+    font-size: 14px;
+    transition: $transition;
+}
+
+@mixin big-link($color) {
+    &:hover {
+        border-color: $color;
+        color: $color;
+        background-color: #fff;
+    }
+}
